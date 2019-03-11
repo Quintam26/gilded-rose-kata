@@ -6,11 +6,12 @@ describe("Gilded Rose", function() {
     expect(items[0].name).toEqual("foo");
   });
 
-  // it("Once the sell by date has passed, quality degrades twice as fast", function() {
-  //   items = [ new Item("foo", 0, 0) ];
-  //   update_quality();
-  //   expect(items[0].name).toEqual("foo");
-  // });
+  it("Once the sell by date has passed, quality degrades twice as fast", function() {
+    items = [ new Item("foo", -5, 20) ];
+    update_quality();
+    console.log('Quality degrades 2x',items[0].quality);
+    expect(items[0].quality).toEqual(17);
+  });
 
   it("The quality of an item is never negative", function() {
     items = [ new Item("foo", 5, 0) ];
