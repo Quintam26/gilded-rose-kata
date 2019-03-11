@@ -1,0 +1,21 @@
+{
+  "name": "glided-rose-kata",
+  "version": "1.0.0",
+  "description": "CircleCi - A short exercise to help us talk about code.",
+  "main": "gilded_rose_spec.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "mocha": "mocha",
+    "test": "npm run mocha"
+  },
+  "author": "Mario Quintana",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.15.1",
+    "mocha": "^6.0.2"
+  }
+}
