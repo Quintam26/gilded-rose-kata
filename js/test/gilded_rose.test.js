@@ -4,10 +4,11 @@ const Item = require('../src/gilded_rose');
 
 describe('Gilded Rose', () => {
 
-    it('Update quantity', () => {
-        const items = [new Item('foo', 0, 0)];
+    it('Update quality', () => {
+        let items = new Item('foo', 0, 0);
         update_quality();
-        expect(items[0].name).equal('foo');
+        console.log('Data for items', items);
+        expect(items[0].name).toEqual('fixme');
     });
 
 });
