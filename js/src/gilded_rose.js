@@ -1,12 +1,15 @@
-module.exports = function Item(name, sell_in, quality) {
+function Item(name, sell_in, quality) {
     this.name = name;
     this.sell_in = sell_in;
     this.quality = quality;
-};
+}
+
+exports.Item = Item;
 
 var items = [];
+ 
 
-module.exports = function update_quality() {
+function update_quality() {
     for(var i = 0; i < items.length; i++) {
         if(items[i].name != 'Aged Brie' && items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
             if(items[i].quality > 0) {
@@ -52,5 +55,7 @@ module.exports = function update_quality() {
             }
         }
     }
-};
+}
+
+exports.update_quality = update_quality;
 
