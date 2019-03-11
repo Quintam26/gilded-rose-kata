@@ -12,11 +12,13 @@ describe("Gilded Rose", function() {
   //   expect(items[0].name).toEqual("foo");
   // });
 
-  // it("The quality of an item is never negative", function() {
-  //   items = [ new Item("foo", 0, 0) ];
-  //   update_quality();
-  //   expect(items[0].name).toEqual("foo");
-  // });
+  it("The quality of an item is never negative", function() {
+    items = [ new Item("foo", 5, 0) ];
+    update_quality();
+    console.log('Quality never negative', items[0].quality);
+    expect(items[0].quality).toNotEqual(-1);
+    expect(items[0].sell_in).toEqual(4);
+  });
 
   // it("'Aged Brie' actually increases in quality the older it gets", function() {
   //   items = [ new Item("foo", 0, 0) ];
